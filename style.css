@@ -1,0 +1,48 @@
+/* finishing touches - dont add body styling */
+body{
+  background-color: #141414;
+  color: #0AA6E3;
+  font-family: Helvetica;
+}
+/* After HTML is finished style section, game, & box */
+section{
+  text-align: center;
+}
+
+#game{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  width: fit-content;
+}
+
+.box{
+  width: 100px;
+  height: 100px;
+  border:1px solid #333333;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 64px;
+}
+
+/* finishing touches */
+.box:hover{ 
+  border: 1px solid #0AA6E3;
+}
+
+/* EXTRA TIME? */
+
+.box {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 3px #fff, 0 0 20px #fff, 0 0 30px #0AA6E3, 0 0 40px #0AA6E3;
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 30px #69d4ff, 0 0 40px #69d4ff, 0 0 50px #69d4ff;
+  }
+}
