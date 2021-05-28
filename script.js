@@ -29,6 +29,7 @@ function createGame(){
 function fillBox(clickedCell){
   let bottom = isBelowEmpty(clickedCell.id);
   document.getElementById(bottom).innerHTML = currentPlayer;
+  document.getElementById(bottom).style.color = currentPlayer === 'X' ? '#00f7d6' : '#a245ff';
   let row = bottom % width !== 0 ? Math.ceil(bottom/width) : bottom/width;
   let col = bottom % 7 === 0 ? bottom % 7 + width : bottom % 7;
   gameState[row-1][col-1] = currentPlayer;
@@ -86,11 +87,9 @@ function checkVertical(col){
 }
 
 function checkDiagonalLeft(col){
-  console.log(col)
   let currentArr = gameState.map((row, i) => {
     return row[col + i];
   });
-  console.log(currentArr)
   for(let i = 0; i < currentArr.length; i++){
     if(currentArr[i] === '' ||  currentArr[i] === undefined){continue}
     if(currentArr[i] === currentArr[i+1] && currentArr[i] === currentArr[i+2] && currentArr[i] === currentArr[i+3]){
@@ -101,11 +100,9 @@ function checkDiagonalLeft(col){
 }
 
 function checkDiagonalRight(col){
-  console.log(col)
   let currentArr = gameState.map((row, i) => {
     return row[col - i];
   });
-  console.log(currentArr)
   for(let i = 0; i < currentArr.length; i++){
     if(currentArr[i] === '' ||  currentArr[i] === undefined){continue}
     if(currentArr[i] === currentArr[i+1] && currentArr[i] === currentArr[i+2] && currentArr[i] === currentArr[i+3]){

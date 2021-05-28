@@ -29,9 +29,11 @@ body{
   height: 10vw;
   border: 1px solid #333333;
   cursor: pointer;
-  line-height: 100px;
-  font-size: 64px;
+  line-height: 10vw;
+  font-size: 10vw;
 }
+
+
 
 /* finishing touches */
 .box:hover{ 
