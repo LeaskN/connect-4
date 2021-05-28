@@ -3,10 +3,18 @@ body{
   background-color: #141414;
   color: #0AA6E3;
   font-family: Helvetica;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* After HTML is finished style section, game, & box */
-section{
+.section{
   text-align: center;
+  width: 100vw;
+  align-items: center;
 }
 
 #game{
@@ -17,9 +25,9 @@ section{
 }
 
 .box{
-  width: 100px;
-  height: 100px;
-  border:1px solid #333333;
+  width: 10vw;
+  height: 10vw;
+  border: 1px solid #333333;
   cursor: pointer;
   line-height: 100px;
   font-size: 64px;
